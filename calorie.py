@@ -1,9 +1,14 @@
-height = 1.8
-weight = 40
-kolvo = 100000
-aktiv = 14
-dlina = height/4+0.37
-distance = kolvo*dlina
-skorost = distance/aktiv
-calor = 0.035*weight+skorost**2/height*0.029*weight
+Height = 1.8
+Weight = 40
+Kolvo = 100000
+Aktiv = 14
+dlina = Height/4+0.37
+distance = Kolvo*dlina/1000
+skorost = distance/Aktiv
+calor = 0.035*Weight+skorost**2/Height*0.029*Weight
 print(f'Distance: {distance}, Calories: {calor}')
+if distance < 2:
+    print('Walk more')
+elif distance > 4:
+    print('very well')
+else: print('not bad not good')
